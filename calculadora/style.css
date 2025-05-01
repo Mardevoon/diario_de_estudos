@@ -1,0 +1,103 @@
+:root{
+    --cor-deg1: #4535C1;
+    --cor-deg2: #478CCF;
+    --cor-deg3: #36C2CE;
+    --cor-deg4: #77E4C8;
+    --cor-bt: #06283D;
+    --cor-bt2: white;
+    --cor-cc: #232323;
+}
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(160deg, var(--cor-deg1), var(--cor-deg2), var(--cor-deg3), var(--cor-deg4));
+    font-family: inherit;
+}
+
+/* Container da calculadora */
+.wrapper {
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: var(--cor-cc);
+}
+
+/* Tela de exibição */
+.screen {
+    width: 326px;
+    padding: 20px;
+    font-size: 35px;
+    text-align: right;
+    overflow: auto;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    color: var(--cor-cc);
+}
+
+/* Linhas de botões */
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+/* Botões padrão */
+.calc-button {
+    flex-basis: 20%;
+    height: 65px;
+    font-size: 24px;
+    font-family: inherit;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    color: var(--cor-cc);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Botão de função (último da linha) */
+.calc-button:last-child {
+    background: var(--cor-bt);
+    color: var(--cor-bt2);
+}
+
+/* Efeito ao clicar */
+.calc-button:active {
+    background-color: var(--cor-bt2);
+    color: var(--cor-cc);
+}
+
+/* Botões especiais */
+.double {
+    flex-basis: 47%;
+}
+
+.triple {
+    flex-basis: 73%;
+}
